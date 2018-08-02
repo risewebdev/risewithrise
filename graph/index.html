@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Animated Data Bar Chart & Graph</title>
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+<meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  <main class="stats">
+  <header class="stats__header">
+    <div class="stats__header-num">
+      <p>RiSE</p>
+    </div>
+    <div class="stats__header-name">
+      <p>Over the years<span>2013-2018</span></p>
+    </div>
+  </header>
+  <ul class="stats__list">
+    <li class="stats__item">
+      <p class="stats__item-num">6</p>
+      <div class="stats__item-bar"></div>
+    </li>
+    <li class="stats__item">
+      <p class="stats__item-num">11</p>
+      <div class="stats__item-bar"></div>
+    </li>
+    <li class="stats__item">
+      <p class="stats__item-num">15</p>
+      <div class="stats__item-bar"></div>
+    </li>
+    <li class="stats__item">
+      <p class="stats__item-num">40</p>
+      <div class="stats__item-bar"></div>
+    </li>
+    <li class="stats__item">
+      <p class="stats__item-num">65</p>
+      <div class="stats__item-bar"></div>
+    </li>
+    <li class="stats__item">
+      <p class="stats__item-num">100</p>
+      <div class="stats__item-bar"></div>
+    </li>
+ 
+  </ul>
+  <div class="stats__overlay">
+    <div class="stats__overlay-back">
+      <svg fill="white" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36"><path d="M30 16.5H11.74l8.38-8.38L18 6 6 18l12 12 2.12-2.12-8.38-8.38H30v-3z"></path></svg>
+      <p id="year">2009-2010</p>
+    </div>
+    <div class="stats__overlay-avg">
+      <p class="avg" id="avg">0.69</p>
+      <p>Goals per game</p>
+    </div>
+    <div class="stats__overlay-info">
+      <div class="stats__overlay-info-half">
+        <p id="goals">50</p>
+        <p>Goals</p>
+      </div>
+      <div class="stats__overlay-info-half">
+        <p id="games">72</p>
+        <p>Games</p>
+      </div>
+    </div>
+  </div>
+</main>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>

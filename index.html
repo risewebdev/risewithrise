@@ -1,0 +1,1355 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>RiSE</title>
+    <meta name="keywords" content="">
+	<meta name="description" content="">
+    <!-- 
+	Medigo Template
+	http://www.templatemo.com/preview/templatemo_460_medigo
+    -->
+    
+	<!-- Google Fonts -->
+	<link href="http://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic,700itali" rel="stylesheet">
+	<link href="http://fonts.googleapis.com/css?family=Raleway:400,900,800,700,500,200,100,600" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Work+Sans:500,600,700,800" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="bootstrap/bootstrap.css">
+	<link rel="stylesheet" href="css/misc.css">
+	<link rel="stylesheet" href="css/blue-scheme.css">
+	<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    
+
+    <!-- Custom styles for this template -->
+    <link href="css/full-slider.css" rel="stylesheet">
+    
+    
+    <!--CAROUSEL-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	
+    
+	<!-- JavaScripts -->
+	<script src="js/jquery-1.10.2.min.js"></script>
+	<script src="js/jquery-migrate-1.2.1.min.js"></script>
+	<script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	
+	
+
+	<link rel="icon" href="http://www.rise-institute.com/favicon.ico"/>
+	
+	
+	<style>
+	
+	@media (max-width: 600px) {
+  #mob2 {
+  width:100%;
+  height:0vh;
+  }
+}
+	
+	@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css);
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500,800);
+figure.snip1232 {
+  font-family: 'Raleway', Arial, sans-serif;
+  position: relative;
+  float: left;
+  overflow: hidden;
+  margin: 10px 1%;
+  min-width: 220px;
+  max-width: 310px;
+  width: 100%;
+  color: #333;
+  text-align: left;
+  box-shadow: none !important;
+}
+figure.snip1232 * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+figure.snip1232 img {
+  max-width: 100%;
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  margin-right: 5px;
+  display: block;
+  z-index: 1;
+  position: absolute;
+  right: 50%;
+}
+figure.snip1232 blockquote {
+  margin: 0;
+  display: block;
+  border-radius: 8px;
+  position: relative;
+  background-color: #fafafa;
+  padding: 65px 50px 35px 50px;
+  font-size: 0.8em;
+  font-weight: 500;
+  margin: -40px 0 0;
+  line-height: 1.6em;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+figure.snip1232 blockquote:before,
+figure.snip1232 blockquote:after {
+  font-family: 'FontAwesome';
+  content: "\201C";
+  position: absolute;
+  font-size: 50px;
+  opacity: 0.3;
+  font-style: normal;
+}
+figure.snip1232 blockquote:before {
+  top: 55px;
+  left: 20px;
+}
+figure.snip1232 blockquote:after {
+  content: "\201D";
+  right: 20px;
+  bottom: 5px;
+}
+figure.snip1232 .author {
+  margin: 0;
+  height: 80px;
+  display: block;
+  text-align: left;
+  padding: 0 35px;
+  position: relative;
+  z-index: 1;
+}
+figure.snip1232 .author h5,
+figure.snip1232 .author span {
+  left: 50%;
+  position: absolute;
+  opacity: 0.8;
+  padding: 3px 5px;
+}
+figure.snip1232 .author h5 {
+  text-transform: uppercase;
+  bottom: 50%;
+  margin: 0;
+  font-weight: 800;
+  color: #ffffff;
+}
+figure.snip1232 .author span {
+  font-size: 0.8em;
+  color: #000000;
+  top: 50%;
+  font-weight: 500;
+}
+	
+	
+	
+	body{
+		font-family:'Varela Round', sans-serif;
+	}
+	
+	
+	/*----Hover Color-----*/
+	.hovercolor {
+    /* filter: url(filters.svg#grayscale); Firefox 3.5+ */
+      filter: gray; /* IE5+ */
+      -webkit-filter: grayscale(1); /* Webkit Nightlies & Chrome Canary */
+      -webkit-transition: all .3s ease-in-out;  
+    }
+
+    .hovercolor:hover {
+    filter: none;
+      -webkit-filter: grayscale(0);
+    }
+	
+	
+	
+	
+	/*----------------------------------
+    Macbook pro mockup from:
+    http://jaredhardy.com/minimal-devices/
+    
+----------------------------------*/
+
+.md-macbook-pro {
+  display: block;
+  width: 55.3125em;
+  height: 31.875em;
+  font-size: 13px;
+  margin: 0 auto;
+
+  @media (max-width:1199px){
+    font-size: 11px;
+  }
+  @media (max-width:1024px){
+    font-size: 10px;
+  }
+
+  @media (max-width:767px){
+    font-size: 7px;
+  }
+
+  @media (max-width:320px){
+    font-size: 5px;
+  }
+
+}
+.md-macbook-pro .md-lid {
+  width: 45em;
+  height: 30.625em;
+  overflow: hidden;
+  margin: 0 auto;
+  position: relative;
+  border-radius: 1.875em;
+  border: solid 0.1875em #cdced1;
+  background: #131313;
+}
+.md-macbook-pro .md-camera {
+  width: 0.375em;
+  height: 0.375em;
+  margin: 0 auto;
+  position: relative;
+  top: 1.0625em;
+  background: #000;
+  border-radius: 100%;
+  box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.25);
+}
+.md-macbook-pro .md-camera:after {
+  content: "";
+  display: block;
+  width: 0.125em;
+  height: 0.125em;
+  position: absolute;
+  left: 0.125em;
+  top: 0.0625em;
+  background: #353542;
+  border-radius: 100%;
+}
+.md-macbook-pro .md-screen {
+  width: 42.25em;
+  height: 26.375em;
+  margin: 0 auto;
+  position: relative;
+  top: 2.0625em;
+  // background: #1d1d1d;
+  background: #fff;
+  overflow: hidden;
+}
+.md-macbook-pro .md-screen img {
+  width: 100%;
+}
+.md-macbook-pro .md-base {
+  width: 100%;
+  height: 0.9375em;
+  position: relative;
+  top: -0.75em;
+  background: #c6c7ca;
+}
+.md-macbook-pro .md-base:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 0.5em;
+  margin: 0 auto;
+  position: relative;
+  bottom: -0.1875em;
+  background: #b9babe;
+  border-radius: 0 0 1.25em 1.25em;
+}
+.md-macbook-pro .md-base:before {
+  content: "";
+  display: block;
+  width: 7.6875em;
+  height: 0.625em;
+  margin: 0 auto;
+  position: relative;
+  background: #a6a8ad;
+  border-radius: 0 0 0.625em 0.625em;
+}
+.md-macbook-pro.md-glare .md-lid:after {
+  content: "";
+  display: block;
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 0 1.25em 0 0;
+  background: -webkit-linear-gradient(37deg, rgba(255, 255, 255, 0) 50%, rgba(247, 248, 240, 0.025) 50%, rgba(250, 245, 252, 0.08));
+  background: -moz-linear-gradient(37deg, rgba(255, 255, 255, 0) 50%, rgba(247, 248, 240, 0.025) 50%, rgba(250, 245, 252, 0.08));
+  background: -o-linear-gradient(37deg, rgba(255, 255, 255, 0) 50%, rgba(247, 248, 240, 0.025) 50%, rgba(250, 245, 252, 0.08));
+  background: linear-gradient(53deg, rgba(255, 255, 255, 0) 50%, rgba(247, 248, 240, 0.025) 50%, rgba(250, 245, 252, 0.08));
+}
+	
+	@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro);
+@import url(https://fonts.googleapis.com/css?family=Teko:700);
+.snip1563 {
+  background-color: #fff;
+  color: #ffffff;
+  display: inline-block;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 16px;
+  margin: 10px 5px;
+  max-width: 315px;
+  min-width: 230px;
+  overflow: hidden;
+  position: relative;
+  text-align: right;
+  width: 100%;
+}
+
+.snip1563 *,
+.snip1563 *:before,
+.snip1563 *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.45s ease;
+  transition: all 0.45s ease;
+}
+
+.snip1563 img {
+  backface-visibility: hidden;
+  max-width: 100%;
+  vertical-align: top;
+}
+
+.snip1563:before,
+.snip1563:after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: '';
+  background-color: #b81212;
+  opacity: 0.5;
+  -webkit-transition: all 0.45s ease;
+  transition: all 0.45s ease;
+}
+
+.snip1563:before {
+  -webkit-transform: skew(30deg) translateX(80%);
+  transform: skew(30deg) translateX(80%);
+}
+
+.snip1563:after {
+  -webkit-transform: skew(-30deg) translateX(70%);
+  transform: skew(-30deg) translateX(70%);
+}
+
+.snip1563 figcaption {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 1;
+  bottom: 0;
+  padding: 20px 20px 20px 40%;
+}
+
+.snip1563 figcaption:before,
+.snip1563 figcaption:after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #b81212;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+  content: '';
+  opacity: 0.5;
+  z-index: -1;
+}
+
+.snip1563 figcaption:before {
+  -webkit-transform: skew(30deg) translateX(100%);
+  transform: skew(30deg) translateX(100%);
+}
+
+.snip1563 figcaption:after {
+  -webkit-transform: skew(-30deg) translateX(90%);
+  transform: skew(-30deg) translateX(90%);
+}
+
+.snip1563 h3,
+.snip1563 p {
+  margin: 0;
+  opacity: 0;
+  letter-spacing: 1px;
+}
+
+.snip1563 h3 {
+  font-family: 'Teko', sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+
+.snip1563 p {
+  font-size: 0.9em;
+}
+
+.snip1563 a {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.snip1563:hover h3,
+.snip1563.hover h3,
+.snip1563:hover p,
+.snip1563.hover p {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  opacity: 0.9;
+}
+
+.snip1563:hover:before,
+.snip1563.hover:before {
+  -webkit-transform: skew(30deg) translateX(30%);
+  transform: skew(30deg) translateX(30%);
+  -webkit-transition-delay: 0.05s;
+  transition-delay: 0.05s;
+}
+
+.snip1563:hover:after,
+.snip1563.hover:after {
+  -webkit-transform: skew(-30deg) translateX(20%);
+  transform: skew(-30deg) translateX(20%);
+}
+
+.snip1563:hover figcaption:before,
+.snip1563.hover figcaption:before {
+  -webkit-transform: skew(30deg) translateX(50%);
+  transform: skew(30deg) translateX(50%);
+  -webkit-transition-delay: 0.15s;
+  transition-delay: 0.15s;
+}
+
+.snip1563:hover figcaption:after,
+.snip1563.hover figcaption:after {
+  -webkit-transform: skew(-30deg) translateX(40%);
+  transform: skew(-30deg) translateX(40%);
+  -webkit-transition-delay: 0.1s;
+  transition-delay: 0.1s;
+}
+
+	
+	@import url(https://fonts.googleapis.com/css?family=BenchNine:700);
+.snip1582 {
+  background-color: #e28d55;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'BenchNine', Arial, sans-serif;
+  font-size: 1em;
+  font-size: 22px;
+  line-height: 1em;
+  margin: 15px 40px;
+  outline: none;
+  padding: 12px 40px 10px;
+  position: relative;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.snip1582:before,
+.snip1582:after {
+  border-color: transparent;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+  border-style: solid;
+  border-width: 0;
+  content: "";
+  height: 24px;
+  position: absolute;
+  width: 24px;
+}
+
+.snip1582:before {
+  border-color: #e28d55;
+  border-top-width: 2px;
+  left: 0px;
+  top: -5px;
+}
+
+.snip1582:after {
+  border-bottom-width: 2px;
+  border-color: #e28d55;
+  bottom: -5px;
+  right: 0px;
+}
+
+.snip1582:hover,
+.snip1582.hover {
+  background-color: #e28d75;
+}
+
+.snip1582:hover:before,
+.snip1582.hover:before,
+.snip1582:hover:after,
+.snip1582.hover:after {
+  height: 100%;
+  width: 100%;
+}
+	
+	</style>
+	
+
+</head>
+<body>
+
+
+
+<div class="responsive_menu">
+        <ul class="main_menu" >
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Our Story</a>
+            	<ul>
+            		<li><a href="vision.html">Vision </a></li>
+            		<li><a href="leadership.html">Team</a></li>
+            		<li><a href="awards.html">Awards</a></li>
+					<li><a href="media.html">Media</a></li>
+            	</ul>
+            </li>
+            <li><a href="#">What We Do</a>
+				<ul>
+					<li><a href="classroom.html">Classroom Programs</a></li>
+					<li><a href="talent.html">Talent Search</a></li>
+                    <li><a href="digital.html">Digital Literacy</a></li>
+                    <li><a href="online.html">Online Learning</a></li>
+                    <li><a href="experiental.html">Experiential Learning</a></li> 
+					<li><a href="fellowshipCover.html">Fellowship Program</a></li>
+				</ul>
+            </li>
+             <li><a href="#">Impact</a>
+				<ul>
+					<li><a href="collaborations.html">Collaborations</a></li>
+					<li><a href="empowerment.html">Empowerment</a></li>                    
+				</ul>
+            </li>
+            <li><a href="blog.html">Blog</a></li>
+             <li><a href="#">Get Involved</a>
+				<ul>
+					<li><a href="volunteer.html">Volunteer</a></li>
+					<li><a href="intern.html">Intern</a></li>
+                    <li><a href="job.html">Full Time</a></li>    
+					<li><a href="fellowshipForm.html"> Fellows</a></li>
+				</ul>
+            </li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <ul class="social-icons icon-circle list-unstyled list-inline" style="align-items:center">  
+	      		<li style="padding:10px 45px 0 45px;align:center"><a href="https://www.facebook.com/RiseWithRiSE/" target="_blank"><i class="fa fa-facebook"></i></a></li> 
+	      		<li style="padding:10px 45px 0 45px;align:center"><a href="https://www.instagram.com/risewithrise/" target="_blank"><i class="fa fa-instagram"></i></a></li> 
+	     		<li style="padding:10px 45px 0 45px;align:center"><a href="https://twitter.com/risewithrise" target="_blank"><i class="fa fa-twitter"></i></a></li> 
+	  		</ul>
+        </ul> <!-- /.main_menu -->
+    </div> <!-- /.responsive_menu -->
+
+	<header class="site-header clearfix">
+		
+		<div class="container" >
+
+			<div class="row" >
+
+				<div class="col-md-12">
+
+					<div class="pull-left logo">
+						<a href="index.html">
+							<img src="images/logo_new.png" width="70" style="margin-top:-15px">
+						</a>
+					</div>	<!-- /.logo -->
+
+					<div class="main-navigation pull-right">
+
+						<nav class="main-nav visible-md visible-lg">
+							<ul class="sf-menu">
+								<li class="active"><a href="index.html">Home</a></li>
+					            <li><a href="#">Our Story</a>
+					            	<ul>
+					            		<li><a href="vision.html">Vision</a></li>
+					            		<li><a href="leadership.html">Team</a></li>
+					            		<li><a href="awards.html">Awards</a></li>
+										<li><a href="media.html">Media</a></li>
+					            	</ul>
+					            </li>
+					            <li><a href="#">What We Do</a>
+									<ul>
+										<li><a href="classroom.html">Classroom Programs</a></li>
+										<li><a href="talent.html">Talent Search</a></li>
+                    					
+                    					<li><a href="online.html">Online Learning</a></li>
+                    					<li><a href="experiential.html">Experiential Learning</a></li>   
+										<li><a href="fellowshipCover.html">Fellowship Program</a></li>
+									</ul>
+            					</li>
+             					<li><a href="#">Impact</a>
+									<ul>
+										<li><a href="collaborations.html">Collaborations</a></li>
+										<li><a href="empowerment.html">Empowerment</a></li>                    
+									</ul>
+            					</li>
+            					
+             					<li><a href="#">Get Involved</a>
+									<ul>
+										<li><a href="volunteer.html">Volunteer</a></li>
+										<li><a href="intern.html">Intern</a></li>
+                    					<li><a href="job.html">Full Time</a></li>      
+										<li><a href="fellowshipForm.html">Fellows</a></li>    
+									</ul>
+            					</li>
+                                <li><a href="blog.html">Blog</a></li>
+                                <li><a href="contact.html">Contact Us</a></li>
+									
+	      							<li class="social-icon"><a href="https://www.facebook.com/RiseWithRiSE/" target="_blank"><em class="fa fa-facebook"></em></a></li> 
+	      							<li class="social-icon"><a href="https://www.instagram.com/risewithrise/" target="_blank"><em class="fa fa-instagram"></em></a></li> 
+	     							<li class="social-icon"><a href="https://twitter.com/risewithrise" target="_blank"><em class="fa fa-twitter"></em></a></li> 
+	  							
+            					
+                                
+							</ul> <!-- /.sf-menu -->
+						</nav> <!-- /.main-nav -->
+
+						<!-- This one in here is responsive menu for tablet and mobiles -->
+					    <div class="responsive-navigation visible-sm visible-xs">
+					        <a href="#nogo" class="menu-toggle-btn">
+					            <i class="fa fa-bars"></i>
+					        </a>
+					    </div> <!-- /responsive_navigation -->
+
+					</div> <!-- /.main-navigation -->
+
+				</div> <!-- /.col-md-12 -->
+
+			</div> <!-- /.row -->
+
+		</div> <!-- /.container -->
+	</header> <!-- /.site-header -->
+
+
+
+		<!--
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="section-header">
+						<h2 class="section-title">Rise with RiSE</h2>
+						<p class="section-desc">Institute with a difference.</p>
+					</div> 
+				</div>
+			</div> 
+		</div>
+		-->
+<!--	<div id="portfolio-carousel" class="portfolio-carousel portfolio-holder">
+			<div class="item">
+				<div class="thumb-post">
+					<div class="overlay">
+						<div class="overlay-inner">
+							<div class="portfolio-infos">
+								<h3 class="portfolio-title">RISE APP for JEE/NEET Prep</h3>
+								<h6>Free access to Numerous Topic wise & Full syllabus tests.<br>Download now and Start Practicing.</h6>
+								<div class="icon">
+									<a href="https://play.google.com/store/apps/details?id=com.rise.institute" target="_blank" style="text-align:center"><img src="images/app.png" align="center"></a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<img src="images/riseps.jpg">
+				</div>
+			</div>
+			<div class="item">
+				<div class="thumb-post">
+					<div class="overlay">
+						<div class="overlay-inner">
+							<div class="portfolio-infos">
+								<h3 class="portfolio-title">RISE Talent Search Examination</h3>
+								<h6><b style="color:orange">15000</b> students | <b style="color:orange">45</b> schools | <b style="color:orange">8</b>  districts</h6>
+								<h6>The largest ever talent search activity conducted in Kashmir for high school students<br><br>The initiative is supported by Jammu & Kashmir Bank Ltd.</h6>
+								<center><a class="btn btn-primary" href="talent" target="_blank" role="button">Learn More</a></center>
+							</div>
+						</div>
+					</div>
+					<img src="images/rtse/rtse1.jpg">
+				</div>
+			</div> 
+			<div class="item">
+				<div class="thumb-post">
+					<div class="overlay">
+						<div class="overlay-inner">
+							<div class="portfolio-infos">
+								<center><a href="https://www.instagram.com/kathbaath/" target="_blank"><img src="images/kathb.jpg" style="width:30%"></a></center>
+								<h3 class="portfolio-title">Kath Baat</h3>
+								<h6>Kath Baath is a discussion forum started by our students. The methodology followed is of learning through feedback and reflection.</h6>
+							</div>
+						</div>
+					</div>
+					<img src="images/kathbaat.JPG">
+				</div>
+			</div> 
+			<div class="item">
+				<div class="thumb-post">
+					<div class="overlay">
+						<div class="overlay-inner">
+							<div class="portfolio-infos">
+								<center><a href="https://www.newsgram.com/iit-graduates-left-7-digit-packages-to-educate-kids-in-kashmir/" target="_blank"><h4 style="color:orange">Read More..</h4></a></center>
+							</div>
+						</div>
+					</div>
+					<img src="images/media/newsgram_article.JPG">
+				</div>
+			</div>
+			<div class="item">
+				<div class="thumb-post">
+					<div class="overlay">
+						<div class="overlay-inner">
+							<div class="portfolio-infos">
+								<span class="meta-category">Green</span>
+								<h3 class="portfolio-title"><a href="project-slideshow">Rectangle Design</a></h3>
+							</div>
+							<div class="portfolio-expand">
+								<a class="fancybox" href="images/includes/project5.jpg" title="Rectangle Design">
+									<i class="fa fa-expand"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+					<img src="images/includes/project5.jpg" alt="Rectangle Design">
+				</div>
+			</div>
+			<div class="item">
+				<div class="thumb-post">
+					<div class="overlay">
+						<div class="overlay-inner">
+							<div class="portfolio-infos">
+								<span class="meta-category">Portfolio</span>
+								<h3 class="portfolio-title"><a href="project-slideshow">Masonry Gallery</a></h3>
+							</div>
+							<div class="portfolio-expand">
+								<a class="fancybox" href="images/includes/project6.jpg" title="Masonry Gallery">
+									<i class="fa fa-expand"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+					<img src="images/includes/project6.jpg" alt="Masonry Gallery">
+				</div>
+			</div> 
+			<div class="item">
+				<div class="thumb-post">
+					<div class="overlay">
+						<div class="overlay-inner">
+							<div class="portfolio-infos">
+								<span class="meta-category">Branding / Identity</span>
+								<h3 class="portfolio-title"><a href="project-slideshow">Gloss Template</a></h3>
+							</div>
+							<div class="portfolio-expand">
+								<a class="fancybox" href="images/includes/project7.jpg" title="Gloss Template">
+									<i class="fa fa-expand"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+					<img src="images/includes/project7.jpg" alt="Gloss Template">
+				</div>
+			</div>
+		</div> -->
+
+	
+    </header>
+    
+    
+    <!--
+    <div class="carousel" style="margin-top:-10px;text-align:center">
+      	<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        	<center>
+        		<ol class="carousel-indicators">
+          			<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          			<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          			<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          			<li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+        		</ol>
+        	</center>
+        	<div class="carousel-inner" role="listbox" style="height:560px">
+            
+            
+          	<div class="carousel-item active" style="background-image: url('images/Created/rawpixel-594853-unsplash.jpg')">
+          		<div class="row">
+          			<div class="col-md-12 col-xs-4" style="padding-top:200px;color:grey">
+          	  			
+          			</div>
+          		</div>        
+            </div>
+            
+   
+          	
+          	<div class="carousel-item" style="background-image: url('images/rtse/rtse1.jpg')">
+            	<div class="row">
+          			<div class="col-md-12 col-xs-4" style="padding-top:200px;color:white">
+          	  			<h1 style="font-size:40px">RISE Talent Search Examination</h1>
+			  			<h3><b style="color:orange">15000</b> students | <b style="color:orange">45</b> schools | <b style="color:orange">8</b>  districts</h3>
+			  			<h3>The largest ever talent search activity conducted in Kashmir for high school students<br><br>The initiative is supported by Jammu & Kashmir Bank Ltd.</h3>
+			  			<br>
+			  			<center><a class="btn btn-primary btn-lg" href="talent" target="_blank" role="button">Learn More</a></center>
+          			</div>
+          		</div>
+          	</div>
+          	
+            
+          	<div class="carousel-item" style="background-image: url('images/kathbaat.JPG')">
+            	<div class="row">
+          			<div class="col-md-12 col-xs-4" style="padding-top:100px;color:white">
+          				<center><a href="https://www.instagram.com/kathbaath/" target="_blank"><img src="images/kathb.jpg" style="width:10%"></a></center>
+          				<br>
+          	  			<h1 style="font-size:40px">Kath Baat</h1>
+			  			<h3>Kath Baath is a discussion forum started by our students. <br>The methodology followed is of learning through feedback and reflection.</h3>
+          			</div>
+          		</div>
+          	</div>
+          	
+            
+          	<div class="carousel-item" style="background-image: url('images/media/newsgram_article.JPG')">
+            	<div class="row">
+          			<div class="col-md-12 col-xs-4" style="padding-top:200px;color:white">
+          	  			<center><a href="https://www.newsgram.com/iit-graduates-left-7-digit-packages-to-educate-kids-in-kashmir/" target="_blank"><h2 style="color:orange">Read More..</h2></a></center>
+          			</div>
+          		</div>
+          	</div>
+        	</div>
+        	<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          		<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          		<span class="sr-only">Previous</span>
+        	</a>
+        	<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          		<span class="carousel-control-next-icon" aria-hidden="true"></span>
+          		<span class="sr-only">Next</span>
+        	</a>
+      	</div>
+        -->
+        <div class="carousel" style="text-align:center; position:relative; margin-top:0px">
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+	  <li data-target="#myCarousel" data-slide-to="3"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active">
+        <img src="images/Created/edwin-andrade-153753-unsplash copy.jpg" alt="App" style="width:100%; margin-top:20px;">
+      </div>
+
+      <div class="item">
+	  <a href="talent.html">
+        <img src="images/rtse/rtse1.jpg" alt="Talent" style="width:100%;  margin-top:20px;">
+      </a>
+	  </div>
+    
+      <div class="item">
+	  <a href="http://withkashmir.org/2018/01/31/important-kath-baath/amp/">
+        <img src="images/Created/kbatth.jpg" alt="Kath Baath" style="width:100%;  margin-top:20px;">
+      </div>
+	  </a>
+      
+      <div class="item">
+	  <a href="http://withkashmir.org/2018/01/31/important-kath-baath/amp/">
+        <img src="images/Created/kbatth.jpg" alt="Kath Baath" style="width:100%;  margin-top:20px;">
+      </div>
+	  </a>
+	  
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+       
+		
+	<div class="col-md-6 hovercolor" id="mob1" style="height:92.658vh; background-image:url('../Site/images/caleb-woods-275754-unsplash1.jpg');"></div>
+	   <div class="col-md-6" style="height:92.658vh; display: flex;
+  align-items: center; background-color:#ffffff; margin-top:0px;"><strong>
+    <div style="padding-left:10%; padding-right:10%; font-family: 'Varela Round', sans-serif; text-align:left; font-size:1.1em">
+	<p style="font-size:1.5em; color:#e28d55" >Vision</p>
+	
+		At <span style="font-size:1.1em; color:#e28d55;">RiSE</span>, we believe that a successful classroom is one in which the students' zeal to learn is matched by the teacher's passion to teach.</strong><br> We lay emphasis on selecting the right set of students and providing them with coaching and personalized mentoring to help them meet their goals.</p>
+		<button class="snip1582" style="margin-top:10%; margin-left:0px;"> Vision and Mission </button>
+     </div>
+</div>
+
+
+	   <div class="col-md-6 " style="height:92.658vh; display: flex;
+  align-items: center; background-color:#ffffff; margin-top:0px;"><strong>
+    <div style="padding-left:6%; padding-right:6%; font-family: 'Varela Round', sans-serif; text-align:center; font-size:1.1em">
+	
+	
+</strong>
+	
+<div class="col-md-4">
+<div class="service-icon-wrap">
+							<i class="fa fa-road fa-2x" style="font-size:65px; "></i>
+						</div> <!-- /.service-icon-wrap -->
+						<div class="service-cnt-wrap">
+							<strong><span style="font-size:1.1em; color:#e28d55; ">Stay informed & well-prepared.</span>
+							<p  style="font-family: 'Varela Round', sans-serif; text-align:left;">Adequate and appropriate guidance is necessary to achieve success. </strong><br>At<strong><span style="font-size:1.1em; color:#e28d55;"> RISE</span></strong>, we keep a track of regular changes that are made to the patterns of competitive examinations held nation wide. We apprise our students on how to deal with the challenges arising due to such changes.</p>
+						</div> <!-- /.service-cnt-wrap -->
+</div>
+<div class="col-md-4">
+<div class="service-icon-wrap">
+							<i class="fa fa-mobile-phone fa-2x" style="font-size:65px; "></i>
+						</div> <!-- /.service-icon-wrap -->
+						<div class="service-cnt-wrap">
+							<strong><span style="font-size:1.1em; color:#e28d55; ">Test yourself. Strive for excellence.</span>
+							<p  style="font-family: 'Varela Round', sans-serif; text-align:left;">Regular, topic wise and entrance pattern tests are held </strong> to ensure students stay focussed & develop the right kind of mindset towards competitive examinations. Strategies are suggested to students  for them to improve and master the art of performing to their potential.</p>
+						</p>
+						</div> <!-- /.service-cnt-wrap -->
+</div>
+<div class="col-md-4">
+<div class="service-icon-wrap">
+							<i class="fa fa-pencil-square-o fa-2x" style="font-size:65px; "></i>
+						</div> <!-- /.service-icon-wrap -->
+						<div class="service-cnt-wrap">
+							<strong><span style="font-size:1.1em; color:#e28d55; ">Personalized attention.</span>
+							<p  style="font-family: 'Varela Round', sans-serif; text-align:left;">At RISE, limited batch size ensures personalized attention to each and every one of the students. </strong><br>Regular one-on-one sessions with the students ensures that all the difficulties and concerns of students are addressed in a timely manner. The faculty is available round the clock to help students with all sorts of issues.</p>
+						</p>
+						</div> <!-- /.service-cnt-wrap -->
+</div>
+
+
+     </div>
+</div>
+<div id="mob2">
+<div class="col-md-6 hovercolor" style="height:92.658vh; background-image:url('../Site/images/caleb-woods-275754-unsplash1 1copy.jpg');"></div>
+</div>
+<div class="col-md-6 hovercolor" id="mob3" style="height:92.658vh; background-image:url('../Site/images/caleb-woods-275754-unsplashas1.jpg');"></div>
+	   <div class="col-md-6" style="height:92.658vh; display: flex;
+  align-items: center; background-color:#ffffff; margin-top:0px;"><strong>
+    <div style="padding-left:10%; padding-right:10%; font-family: 'Varela Round', sans-serif; text-align:center; font-size:1.1em">
+	<p style="font-size:1.5em; color:#e28d55" >Success Stories</p>
+	
+	
+		By generating these success stories <span style="font-size:1.1em; color:#e28d55;">RiSE</span> has created a wave of hope in the valley.</strong><br> There is an exponential increment in the number of students applying to foreign universities and appearing in competitive examinations. 
+	
+     </div>
+</div>
+	
+  
+  
+
+	
+	<div class="clearfix"></div>
+
+
+
+	
+	<div class="col-md-12" style="	width:100%; background-image:url('../Site/images/patrick-tomasso-42162-unsplash1 copy.jpg');
+									background-size:     cover;
+									background-repeat:   no-repeat;
+									background-position: center center; 
+									color:white;
+									text-align:center;	
+									height:100vh;
+									font-family: 'Varela Round', sans-serif;">
+	<div style="position: relative;
+    top: 50%;
+    transform: translateY(-50%);"> <h1 ><strong><span style="font-size:1.2em; color:#e28d55"> Fellowship </strong>Program </span> </h1> <center>
+	
+	<p style="width:80%; padding-top:6%; padding-bottom:6%; font-size:1.1em;">At RISE, we believe that a successful classroom is one in which the students' zeal to learn is matched by the teacher's passion to teach. We lay emphasis on selecting the right set of students and providing them with coaching and personalized mentoring to help them meet their goals.</p>
+	
+	<button class="snip1582" > Join The Program </button>
+	</div>
+	</center>
+	</div>
+	
+	<div class="clearfix"></div>
+	<center>
+	<section class="light-content our-team" style="margin-top:20px;">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="section-header">
+						<h2 class="section-title">Press Coverage</h2>
+						<br />
+					</div> <!-- /.section-header -->
+				</div> <!-- /.col-md-12 -->
+				<div class="media-icons col-xs-6 col-md-3" style="margin-top:-80px;">
+						<div class="thumb-post">
+                        	<a href="https://www.youtube.com/watch?v=u5bR2IVl02c" target="_blank" ><img src="images/media/cnn.jpg" style="width:60%;"></a>
+						</div>
+				</div>
+
+				<div class="media-icons col-xs-6 col-md-3" style="margin-top:-80px">
+					<div class="thumb-post">
+                        <a href="http://www.business-standard.com/article/news-ani/four-srinagar-based-students-crack-iit-jee-open-new-vista-for-others-116062100340_1.html" target="_blank"><img src="images/media/bs.jpg" style="width:60%;"></a>
+					</div>
+				</div>
+
+				<div class="media-icons col-xs-6 col-md-3" style="margin-top:-80px">
+					<div class="thumb-post">
+                        <a href="http://www.rise-institute.com/img/et18june.jpg" target="_blank"><img src="images/media/etlogo.jpg" style="width:60%;"></a>
+					</div>
+				</div> <!-- /.col-md-4 -->
+
+				<div class="media-icons col-xs-6 col-md-3" style="margin-top:-80px">
+					<div class="thumb-post">
+                        <a href="http://www.bbc.com/hindi/india-39860878" target="_blank"><img src="images/media/bbc.jpg" style="width:60%;"></a>
+					</div>
+				</div>
+			</div> <!-- /.row -->
+		</div> <!-- /.container -->
+		</center>
+	</section> <!-- /.our-team -->
+	
+	
+<div class="col-md-4">
+	<figure class="snip1232">
+  <div class="author">
+    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sq-sample7.jpg" alt="sq-sample7"/>
+    <h5>Pelican Steve</h5><span>LittleSnippets</span>
+  </div>
+  <blockquote>Calvin: Sometimes when I'm talking, my words can't keep up with my thoughts. I wonder why we think faster than we speak. Hobbes: Probably so we can think twice. </blockquote>
+</figure>
+</div>
+
+<div class="col-md-4">
+<figure class="snip1232 hover">
+  <div class="author">
+    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sq-sample10.jpg" alt="sq-sample10"/>
+    <h5>Max Conversion</h5><span>LittleSnippets</span>
+  </div>
+  <blockquote>Thank you. before I begin, I'd like everyone to notice that my report is in a professional, clear plastic binder...When a report looks this good, you know it'll get an A. That's a tip kids. Write it down.</blockquote>
+</figure>
+</div>
+
+<div class="col-md-4">
+<figure class="snip1232">
+  <div class="author">
+    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sq-sample12.jpg" alt="sq-sample12"/>
+    <h5>Eleanor Faint</h5><span>LittleSnippets</span>
+  </div>
+  <blockquote>My behaviour is addictive functioning in a disease process of toxic co-dependency. I need holistic healing and wellness before I'll accept any responsibility for my actions.</blockquote>
+</figure>
+</div>
+	
+	
+	
+
+	<div class="clearfix"></div>
+  
+    <section class="light-content our-team" style="margin-top:0px;">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="section-header">
+						<h2 class="section-title">Online Learning</h2>
+						<p class="section-desc">Watch the comprehensive lectures on various topics on your Youtube channel.</p>
+					</div> <!-- /.section-header -->
+				</div> <!-- /.col-md-12 -->
+			</div> <!-- /.row -->
+		</div> <!-- /.container -->
+		<div class="team-members">
+			<div class="container">
+				<div class="row">
+
+					<div class="col-md-4 col-sm-4">
+						<div class="team-member">
+							<div class="thumb-post">
+							
+							<a href="vclass01.html">
+								<img src="images/Created/chem.jpg" style="width:100%" alt="">
+								<span class="member-role">Physical Chemistry</span>
+
+							
+							</div>
+							<div class="member-content">
+								<p style="margin-top:5px;">Physical Chemistry by Mubeen Masudi, IIT Bombay </p>
+							</div>
+							</a>
+						</div> <!-- /.team-member -->
+					</div> <!-- /.col-md-4 -->
+
+					<div class="col-md-4 col-sm-4">
+						<div class="team-member">
+							<div class="thumb-post">
+							<a href="vclass04.html">
+								<img src="images/Created/math.jpg" style="width:100%" alt="">
+								<span class="member-role">Algebra</span>
+							</div>
+							<div class="member-content">
+								<p style="margin-top:5px;">Algebra by Salman Shahid, IIT Kharagpur</p>
+							</div>
+							</a>
+						</div> <!-- /.team-member -->
+					</div> <!-- /.col-md-4 -->
+
+					<div class="col-md-4 col-sm-4">
+						<div class="team-member">
+							<div class="thumb-post">
+							<a href="vclass02.html">
+								<img src="images/Created/Untitled-1 copy.jpg" style="width:100%" alt="">
+								<span class="member-role">Mechanics</span>
+							</div>
+							<div class="member-content">
+								<p style="margin-top:5px;">Mechanics by Imbesat Ahmad, IIT Kharagpur</p>
+							</div>
+							</a>
+						</div> <!-- /.team-member -->
+					</div> <!-- /.col-md-4 -->
+
+				</div> <!-- /.row -->
+			</div> <!-- /.container -->
+		</div> <!-- /.team-members -->
+	</section> <!-- /.our-team -->
+    
+
+	
+  	
+
+	<div class="container">
+	
+	
+		<div class="row"> <!--UNIVERSITIES-->
+		
+			<div class="col-md-2">
+				<image src="" style=/>
+			</div>
+		
+		</div>
+	
+	</div>
+	
+
+	
+	
+	
+	
+	
+		<div class="container" style="background-color:white" style="height:100vh;">
+    <div class="row">
+        <div class="col-md-4">
+            <!-- begin panel group -->
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                
+                <!-- panel 1 -->
+                <div class="panel panel-default">
+                    <!--wrap panel heading in span to trigger image change as well as collapse -->
+                    <span class="side-tab" data-target="#tab1" data-toggle="tab" role="tab" aria-expanded="false">
+                        <div class="panel-heading" role="tab" id="headingOne"data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <h4 class="panel-title">RiSE vClass</h4>
+                        </div>
+                    </span>
+                    
+                    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                        <div class="panel-body">
+                        <!-- Tab content goes here -->
+                         Mobile APP: Curated access to our content & counseling materials for underprivileged students in remote areas; ~50,000 students. App used for online assessments & video lectures; acting as a workaround during frequent curfews, strikes & riots
+                        </div>
+                    </div>
+                </div> 
+                <!-- / panel 1 -->
+                
+                <!-- panel 2 -->
+                <div class="panel panel-default">
+                    <!--wrap panel heading in span to trigger image change as well as collapse -->
+                    <span class="side-tab" data-target="#tab2" data-toggle="tab" role="tab" aria-expanded="false">
+                        <div class="panel-heading" role="tab" id="headingTwo" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            <h4 class="panel-title collapsed">RiSE Android App.</h4>
+                        </div>
+                    </span>
+
+                    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                        <div class="panel-body">
+                        <!-- Tab content goes here -->
+                        Mobile APP: Curated access to our content & counseling materials for underprivileged students in remote areas; ~50,000 students. App used for online assessments & video lectures; acting as a workaround during frequent curfews, strikes & riots
+                        </div>
+                    </div>
+                </div>
+                <!-- / panel 2 -->
+                
+                <!--  panel 3 -->
+                <div class="panel panel-default">
+                    <!--wrap panel heading in span to trigger image change as well as collapse -->
+                    <span class="side-tab" data-target="#tab3" data-toggle="tab" role="tab" aria-expanded="false">
+                        <div class="panel-heading" role="tab" id="headingThree"  class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            <h4 class="panel-title">Classroom Program </h4>
+                        </div>
+                    </span>
+
+                        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                          <div class="panel-body">
+                          <!-- tab content goes here -->
+                          That fall, as Nadia and Masha got shipped off to prison camps in Siberia, South Brooklyn tried to recover from the storm. My dad and I spent a lot of time in the same apartment engrossed in separate laptops, separate internet missives. He followed Russian news bloggers closely and would update me on troubling developments. A rise in protofascist nationalism
+                        </div>
+                        </div>
+                      </div>
+					  
+				<div class="panel panel-default">
+                    <!--wrap panel heading in span to trigger image change as well as collapse -->
+                    <span class="side-tab" data-target="#tab4" data-toggle="tab" role="tab" aria-expanded="false">
+                        <div class="panel-heading" role="tab" id="headingFour"  class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            <h4 class="panel-title">Fellowship </h4>
+                        </div>
+                    </span>
+
+                        <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                          <div class="panel-body">
+                          <!-- tab content goes here -->
+                          That fall, as Nadia and Masha got shipped off to prison camps in Siberia, South Brooklyn tried to recover from the storm. My dad and I spent a lot of time in the same apartment engrossed in separate laptops, separate internet missives. He followed Russian news bloggers closely and would update me on troubling developments. A rise in protofascist nationalism
+                        </div>
+                        </div>
+                      </div>
+				
+				<div class="panel panel-default">
+                    <!--wrap panel heading in span to trigger image change as well as collapse -->
+                    <span class="side-tab" data-target="#tab5" data-toggle="tab" role="tab" aria-expanded="false">
+                        <div class="panel-heading" role="tab" id="headingFive"  class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                            <h4 class="panel-title">Talent Search </h4>
+                        </div>
+                    </span>
+
+                        <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+                          <div class="panel-body">
+                          <!-- tab content goes here -->
+                          That fall, as Nadia and Masha got shipped off to prison camps in Siberia, South Brooklyn tried to recover from the storm. My dad and I spent a lot of time in the same apartment engrossed in separate laptops, separate internet missives. He followed Russian news bloggers closely and would update me on troubling developments. A rise in protofascist nationalism
+                        </div>
+                        </div>
+                      </div>
+					  
+				<div class="panel panel-default">
+                    <!--wrap panel heading in span to trigger image change as well as collapse -->
+                    <span class="side-tab" data-target="#tab6" data-toggle="tab" role="tab" aria-expanded="false">
+                        <div class="panel-heading" role="tab" id="headingSix"  class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                            <h4 class="panel-title">Kath Baath </h4>
+                        </div>
+                    </span>
+
+                        <div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
+                          <div class="panel-body">
+                          <!-- tab content goes here -->
+                          That fall, as Nadia and Masha got shipped off to prison camps in Siberia, South Brooklyn tried to recover from the storm. My dad and I spent a lot of time in the same apartment engrossed in separate laptops, separate internet missives. He followed Russian news bloggers closely and would update me on troubling developments. A rise in protofascist nationalism
+                        </div>
+                        </div>
+                      </div>
+					  
+            </div> <!-- / panel-group -->
+             
+        </div> <!-- /col-md-4 -->
+        
+        <div class="col-md-8">
+            <!-- begin macbook pro mockup -->
+            <div class="md-macbook-pro md-glare">
+                <div class="md-lid">
+                    <div class="md-camera"></div>
+                    <div class="md-screen">
+                    <!-- content goes here -->                
+                        <div class="tab-featured-image">
+                            <div class="tab-content">
+                                
+								<div class="tab-pane  in active" id="tab1">
+                                        <img src="../Site/images/Created/211.jpg" alt="tab1" class="img img-responsive">
+                                </div>
+                                
+								<div class="tab-pane " id="tab2">
+                                        <img src="../Site/images/Created/212.jpg">
+                                </div>
+                                
+								<div class="tab-pane fade" id="tab3">
+                                        <img src="../Site/images/Created/213.jpg" alt="tab1" class="img img-responsive">
+                                </div>
+								
+								<div class="tab-pane fade" id="tab4">
+                                        <img src="../Site/images/Created/213.jpg" alt="tab1" class="img img-responsive">
+                                </div>
+								
+								<div class="tab-pane fade" id="tab5">
+                                        <img src="../Site/images/Created/213.jpg" alt="tab1" class="img img-responsive">
+                                </div>
+								
+								<div class="tab-pane fade" id="tab6">
+                                        <img src="../Site/images/Created/213.jpg" alt="tab1" class="img img-responsive">
+                                </div>
+								
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="md-base"></div>
+            </div> <!-- end macbook pro mockup -->
+
+
+
+        </div> <!-- / .col-md-8 -->
+    </div> <!--/ .row -->
+</div> <!-- end sidetab container -->
+	
+	
+	
+	
+
+	
+
+	
+<div class="container">
+<br/>
+		        <div class="row latest-posts">
+				<a href = "vClass.html">
+		        	<div class="col-md-6 col-sm-6">
+		        		<img src="images/Created/ho01.jpg" alt="RiSE vClass" width="100%"/>
+		        	</div> <!-- /.col-md-4 -->
+		        	<div class="col-md-6 col-sm-6">
+		        		<img src="images/Created/ho02.jpg" alt="RiSE vClass" width="100%"/>
+		        	</div> <!-- /.col-md-4 -->
+				</a>
+		        </div> <!-- /.row -->
+		    </div> <!-- /.container -->
+
+	
+
+	
+	
+	<footer class="site-footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<nav class="footer-nav clearfix">
+						<ul class="footer-menu">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="media.html">Media</a></li>
+							<li><a href="blog.html">Blog</a></li>
+							<li><a href="collaborations.html">Collaborations</a></li>
+							<li><a href="contact.html">Contact</a></li>
+						</ul> <!-- /.footer-menu -->
+					</nav> <!-- /.footer-nav -->
+				</div> <!-- /.col-md-12 -->
+			</div> <!-- /.row -->
+			<div class="row">
+				<div class="col-md-12">
+					<p class="copyright-text">Copyright &copy; 2018 RiSE</p>
+				</div> <!-- /.col-md-12 -->
+			</div> <!-- /.row -->
+		</div> <!-- /.container -->
+	</footer> <!-- /.site-footer -->
+
+	<!-- Scripts -->
+	<script src="js/min/plugins.min.js"></script>
+	<script src="js/min/medigo-custom.min.js"></script>
+
+</body>
+</html>

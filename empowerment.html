@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	
+	
+	
+	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+	
+		
+	
+	<script>  var x;
+	var a;</script>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+body {
+  background: #fcf3ee;
+}
+.chart {
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  top: 50%;
+  left: 50%;
+  margin: -225px 0 0 -225px;
+}
+.doughnutTip {
+  position: absolute;
+  min-width: 30px;
+  max-width: 300px;
+  padding: 5px 15px;
+  border-radius: 1px;
+  background: rgba(0,0,0,.8);
+  color: #ddd;
+  font-size: 17px;
+  text-shadow: 0 1px 0 #000;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1.3;
+  letter-spacing: .06em;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+  pointer-events: none;
+  &::after {
+      position: absolute;
+      left: 50%;
+      bottom: -6px;
+      content: "";
+      height: 0;
+      margin: 0 0 0 -6px;
+      border-right: 5px solid transparent;
+      border-left: 5px solid transparent;
+      border-top: 6px solid rgba(0,0,0,.7);
+      line-height: 0;
+  }
+}
+.doughnutSummary {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: #d5d5d5;
+  text-align: center;
+  text-shadow: 0 0px 0 #111;
+  cursor: default;
+}
+.doughnutSummaryTitle {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  margin-top: -27%;
+  font-size: 22px;
+  color:#e28d55;
+  font-family: 'Varela Round', sans-serif;
+  letter-spacing: .06em;
+}
+.doughnutSummaryNumber {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  margin-top: -15%;
+  font-family: 'Varela Round', sans-serif;
+  color:#e28d55;
+  font-size: 55px;
+}
+.chart path:hover { opacity: 0.65; }
+
+	#myDIV {
+    width: 100%;
+    padding: 50px 0;
+    text-align: center;
+    background-color: #222;
+    margin-top: 20px;
+	display: none;
+	color: white;
+}
+	
+	#myDIV1 {
+    width: 100%;
+    padding: 50px 0;
+    text-align: center;
+    background-color: #222;
+    margin-top: 20px;
+	display: none;
+	color: white;
+}
+
+
+.panel-heading:hover {
+    cursor:pointer;
+}
+.panel-heading {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;    
+}
+
+.side-tab:hover {
+        cursor: pointer;
+    }
+    .panel.panel-default {
+        border: none;
+        box-shadow: none !important;
+        border-bottom-right-radius: 0px;
+        border-bottom-left-radius: 0px;
+        
+    }
+    .panel-heading {
+        border: none;
+        background-color: #eee;
+    
+    }
+    .panel-body {
+        background-color: #f5f5f5;
+    }
+    .panel-title {
+        font-weight: 400;
+        color: $white;
+    }
+
+
+
+
+	
+</style>
+	
+	
+	
+	
+	
+	
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>Empowerment</title>
+    <meta name="keywords" content="">
+	<meta name="description" content="">
+    <meta name="author" content="templatemo">
+    <!-- 
+	Medigo Template
+	http://www.templatemo.com/preview/templatemo_460_medigo
+    -->
+    
+	<!-- Google Fonts -->
+	<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+	<link href="http://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic,700itali" rel="stylesheet">
+	<link href="http://fonts.googleapis.com/css?family=Raleway:400,900,800,700,500,200,100,600" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Work+Sans:500,600,700,800" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+	
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="bootstrap/bootstrap.css">
+	<link rel="stylesheet" href="css/misc.css">
+	<link rel="stylesheet" href="css/blue-scheme.css">
+	
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+	
+	<!-- JavaScripts -->
+	<script src="js/jquery-1.10.2.min.js"></script>
+	<script src="js/jquery-migrate-1.2.1.min.js"></script>
+
+	<link rel="icon" href="http://www.rise-institute.com/favicon.ico"/>
+	
+	
+	<script>
+	
+	
+	$(function(){
+  $("#doughnutChart").drawDoughnutChart([
+    { title: "Tokyo",         value : 120,  color: "#2C3E50" },
+    { title: "San Francisco", value:  80,   color: "#FC4349" },
+    { title: "New York",      value:  70,   color: "#6DBCDB" },
+    { title: "London",        value : 50,   color: "#F7E248" },
+    { title: "Sydney",        value : 40,   color: "#D7DADB" },
+    { title: "Berlin",        value : 20,   color: "#FFF" }
+  ]);
+});
+/*!
+ * jquery.drawDoughnutChart.js
+ * Version: 0.4.1(Beta)
+ * Inspired by Chart.js(http://www.chartjs.org/)
+ *
+ * Copyright 2014 hiro
+ * https://github.com/githiro/drawDoughnutChart
+ * Released under the MIT license.
+ * 
+ */
+;(function($, undefined) {
+  $.fn.drawDoughnutChart = function(data, options) {
+    var $this = this,
+      W = $this.width(),
+      H = $this.height(),
+      centerX = W/2,
+      centerY = H/2,
+      cos = Math.cos,
+      sin = Math.sin,
+      PI = Math.PI,
+      settings = $.extend({
+        segmentShowStroke : true,
+        segmentStrokeColor : "#0C1013",
+        segmentStrokeWidth : 1,
+        baseColor: "rgba(0,0,0,0.5)",
+        baseOffset: 4,
+        edgeOffset : 10,//offset from edge of $this
+        percentageInnerCutout : 75,
+        animation : true,
+        animationSteps : 90,
+        animationEasing : "easeInOutExpo",
+        animateRotate : true,
+        tipOffsetX: -8,
+        tipOffsetY: -45,
+        tipClass: "doughnutTip",
+        summaryClass: "doughnutSummary",
+        summaryTitle: "TOTAL:",
+        summaryTitleClass: "doughnutSummaryTitle",
+        summaryNumberClass: "doughnutSummaryNumber",
+        beforeDraw: function() {  },
+        afterDrawed : function() {  },
+        onPathEnter : function(e,data) {  },
+        onPathLeave : function(e,data) {  }
+      }, options),
+      animationOptions = {
+        linear : function (t) {
+          return t;
+        },
+        easeInOutExpo: function (t) {
+          var v = t<.5 ? 8*t*t*t*t : 1-8*(--t)*t*t*t;
+          return (v>1) ? 1 : v;
+        }
+      },
+      requestAnimFrame = function() {
+        return window.requestAnimationFrame ||
+          window.webkitRequestAnimationFrame ||
+          window.mozRequestAnimationFrame ||
+          window.oRequestAnimationFrame ||
+          window.msRequestAnimationFrame ||
+          function(callback) {
+            window.setTimeout(callback, 1000 / 60);
+          };
+      }();
+
+    settings.beforeDraw.call($this);
+
+    var $svg = $('<svg width="' + W + '" height="' + H + '" viewBox="0 0 ' + W + ' ' + H + '" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"></svg>').appendTo($this),
+        $paths = [],
+        easingFunction = animationOptions[settings.animationEasing],
+        doughnutRadius = Min([H / 2,W / 2]) - settings.edgeOffset,
+        cutoutRadius = doughnutRadius * (settings.percentageInnerCutout / 100),
+        segmentTotal = 0;
+
+    //Draw base doughnut
+    var baseDoughnutRadius = doughnutRadius + settings.baseOffset,
+        baseCutoutRadius = cutoutRadius - settings.baseOffset;
+    $(document.createElementNS('http://www.w3.org/2000/svg', 'path'))
+      .attr({
+        "d": getHollowCirclePath(baseDoughnutRadius, baseCutoutRadius),
+        "fill": settings.baseColor
+      })
+      .appendTo($svg);
+
+    //Set up pie segments wrapper
+    var $pathGroup = $(document.createElementNS('http://www.w3.org/2000/svg', 'g'));
+    $pathGroup.attr({opacity: 0}).appendTo($svg);
+
+    //Set up tooltip
+    var $tip = $('<div class="' + settings.tipClass + '" />').appendTo('body').hide(),
+        tipW = $tip.width(),
+        tipH = $tip.height();
+
+    //Set up center text area
+    var summarySize = (cutoutRadius - (doughnutRadius - cutoutRadius)) * 2,
+        $summary = $('<div class="' + settings.summaryClass + '" />')
+                   .appendTo($this)
+                   .css({ 
+                     width: summarySize + "px",
+                     height: summarySize + "px",
+                     "margin-left": -(summarySize / 2) + "px",
+                     "margin-top": -(summarySize / 2) + "px"
+                   });
+    var $summaryTitle = $('<p class="' + settings.summaryTitleClass + '">' + settings.summaryTitle + '</p>').appendTo($summary);
+    var $summaryNumber = $('<p class="' + settings.summaryNumberClass + '"></p>').appendTo($summary).css({opacity: 0});
+
+    for (var i = 0, len = data.length; i < len; i++) {
+      segmentTotal += data[i].value;
+      $paths[i] = $(document.createElementNS('http://www.w3.org/2000/svg', 'path'))
+        .attr({
+          "stroke-width": settings.segmentStrokeWidth,
+          "stroke": settings.segmentStrokeColor,
+          "fill": data[i].color,
+          "data-order": i
+        })
+        .appendTo($pathGroup)
+        .on("mouseenter", pathMouseEnter)
+        .on("mouseleave", pathMouseLeave)
+        .on("mousemove", pathMouseMove);
+    }
+
+    //Animation start
+    animationLoop(drawPieSegments);
+
+    //Functions
+    function getHollowCirclePath(doughnutRadius, cutoutRadius) {
+        //Calculate values for the path.
+        //We needn't calculate startRadius, segmentAngle and endRadius, because base doughnut doesn't animate.
+        var startRadius = -1.570,// -Math.PI/2
+            segmentAngle = 6.2831,// 1 * ((99.9999/100) * (PI*2)),
+            endRadius = 4.7131,// startRadius + segmentAngle
+            startX = centerX + cos(startRadius) * doughnutRadius,
+            startY = centerY + sin(startRadius) * doughnutRadius,
+            endX2 = centerX + cos(startRadius) * cutoutRadius,
+            endY2 = centerY + sin(startRadius) * cutoutRadius,
+            endX = centerX + cos(endRadius) * doughnutRadius,
+            endY = centerY + sin(endRadius) * doughnutRadius,
+            startX2 = centerX + cos(endRadius) * cutoutRadius,
+            startY2 = centerY + sin(endRadius) * cutoutRadius;
+        var cmd = [
+          'M', startX, startY,
+          'A', doughnutRadius, doughnutRadius, 0, 1, 1, endX, endY,//Draw outer circle
+          'Z',//Close path
+          'M', startX2, startY2,//Move pointer
+          'A', cutoutRadius, cutoutRadius, 0, 1, 0, endX2, endY2,//Draw inner circle
+          'Z'
+        ];
+        cmd = cmd.join(' ');
+        return cmd;
+    };
+    function pathMouseEnter(e) {
+      var order = $(this).data().order;
+      $tip.text(data[order].title + ": " + data[order].value)
+          .fadeIn(200);
+      settings.onPathEnter.apply($(this),[e,data]);
+    }
+    function pathMouseLeave(e) {
+      $tip.hide();
+      settings.onPathLeave.apply($(this),[e,data]);
+    }
+    function pathMouseMove(e) {
+      $tip.css({
+        top: e.pageY + settings.tipOffsetY,
+        left: e.pageX - $tip.width() / 2 + settings.tipOffsetX
+      });
+    }
+    function drawPieSegments (animationDecimal) {
+      var startRadius = -PI / 2,//-90 degree
+          rotateAnimation = 1;
+      if (settings.animation && settings.animateRotate) rotateAnimation = animationDecimal;//count up between0~1
+
+      drawDoughnutText(animationDecimal, segmentTotal);
+
+      $pathGroup.attr("opacity", animationDecimal);
+
+      //If data have only one value, we draw hollow circle(#1).
+      if (data.length === 1 && (4.7122 < (rotateAnimation * ((data[0].value / segmentTotal) * (PI * 2)) + startRadius))) {
+        $paths[0].attr("d", getHollowCirclePath(doughnutRadius, cutoutRadius));
+        return;
+      }
+      for (var i = 0, len = data.length; i < len; i++) {
+        var segmentAngle = rotateAnimation * ((data[i].value / segmentTotal) * (PI * 2)),
+            endRadius = startRadius + segmentAngle,
+            largeArc = ((endRadius - startRadius) % (PI * 2)) > PI ? 1 : 0,
+            startX = centerX + cos(startRadius) * doughnutRadius,
+            startY = centerY + sin(startRadius) * doughnutRadius,
+            endX2 = centerX + cos(startRadius) * cutoutRadius,
+            endY2 = centerY + sin(startRadius) * cutoutRadius,
+            endX = centerX + cos(endRadius) * doughnutRadius,
+            endY = centerY + sin(endRadius) * doughnutRadius,
+            startX2 = centerX + cos(endRadius) * cutoutRadius,
+            startY2 = centerY + sin(endRadius) * cutoutRadius;
+        var cmd = [
+          'M', startX, startY,//Move pointer
+          'A', doughnutRadius, doughnutRadius, 0, largeArc, 1, endX, endY,//Draw outer arc path
+          'L', startX2, startY2,//Draw line path(this line connects outer and innner arc paths)
+          'A', cutoutRadius, cutoutRadius, 0, largeArc, 0, endX2, endY2,//Draw inner arc path
+          'Z'//Cloth path
+        ];
+        $paths[i].attr("d", cmd.join(' '));
+        startRadius += segmentAngle;
+      }
+    }
+    function drawDoughnutText(animationDecimal, segmentTotal) {
+      $summaryNumber
+        .css({opacity: animationDecimal})
+        .text((segmentTotal * animationDecimal).toFixed(1));
+    }
+    function animateFrame(cnt, drawData) {
+      var easeAdjustedAnimationPercent =(settings.animation)? CapValue(easingFunction(cnt), null, 0) : 1;
+      drawData(easeAdjustedAnimationPercent);
+    }
+    function animationLoop(drawData) {
+      var animFrameAmount = (settings.animation)? 1 / CapValue(settings.animationSteps, Number.MAX_VALUE, 1) : 1,
+          cnt =(settings.animation)? 0 : 1;
+      requestAnimFrame(function() {
+          cnt += animFrameAmount;
+          animateFrame(cnt, drawData);
+          if (cnt <= 1) {
+            requestAnimFrame(arguments.callee);
+          } else {
+            settings.afterDrawed.call($this);
+          }
+      });
+    }
+    function Max(arr) {
+      return Math.max.apply(null, arr);
+    }
+    function Min(arr) {
+      return Math.min.apply(null, arr);
+    }
+    function isNumber(n) {
+      return !isNaN(parseFloat(n)) && isFinite(n);
+    }
+    function CapValue(valueToCap, maxValue, minValue) {
+      if (isNumber(maxValue) && valueToCap > maxValue) return maxValue;
+      if (isNumber(minValue) && valueToCap < minValue) return minValue;
+      return valueToCap;
+    }
+    return $this;
+  };
+})(jQuery);
+	
+	
+	window.sr = ScrollReveal();
+sr.reveal('.foo');
+	
+	</script>
+	
+	
+
+</head>
+<body>
+<div class="responsive_menu">
+        <ul class="main_menu" >
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Our Story</a>
+            	<ul>
+            		<li><a href="vision.html">Vision and Mission</a></li>
+            		<li><a href="leadership.html">Our Leadership</a></li>
+            		<li><a href="awards.html">Awards & Recognitions</a></li>
+					<li><a href="media.html">Media</a></li>
+            	</ul>
+            </li>
+            <li><a href="#">What We Do</a>
+				<ul>
+					<li><a href="classroom.html">Classroom Programs</a></li>
+					<li><a href="talent.html">Talent Search</a></li>
+                    <li><a href="digital.html">Digital Literacy</a></li>
+                    <li><a href="online.html">Online Learning</a></li>
+                    <li><a href="experiental.html">Experiential Learning</a></li>                    
+				</ul>
+            </li>
+             <li><a href="#">Impact</a>
+				<ul>
+					<li><a href="collaborations.html">Collaborations</a></li>
+					<li><a href="empowerment.html">Empowerment</a></li>                    
+				</ul>
+            </li>
+            <li><a href="blog/">Blog</a></li>
+             <li><a href="#">Get Involved</a>
+				<ul>
+					<li><a href="volunteer.html">Volunteer</a></li>
+					<li><a href="intern.html">Intern</a></li>
+                    <li><a href="job.html">Full Time</a></li>                    
+				</ul>
+            </li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <ul class="social-icons icon-circle list-unstyled list-inline" style="align-items:center">  
+	      		<li style="padding:10px 45px 0 45px;align:center"><a href="https://www.facebook.com/RiseWithRiSE/" target="_blank"><i class="fa fa-facebook"></i></a></li> 
+	      		<li style="padding:10px 45px 0 45px;align:center"><a href="https://www.instagram.com/risewithrise/" target="_blank"><i class="fa fa-instagram"></i></a></li> 
+	     		<li style="padding:10px 45px 0 45px;align:center"><a href="https://twitter.com/risewithrise" target="_blank"><i class="fa fa-twitter"></i></a></li> 
+	  		</ul>
+        </ul> <!-- /.main_menu -->
+    </div> <!-- /.responsive_menu -->
+
+	<header class="site-header clearfix">
+		
+		<div class="container" >
+
+			<div class="row" >
+
+				<div class="col-md-12">
+
+					<div class="pull-left logo">
+						<a href="index.html">
+							<img src="images/logo_new.png" width="70" style="margin-top:-15px">
+						</a>
+					</div>	<!-- /.logo -->
+
+					<div class="main-navigation pull-right">
+
+						<nav class="main-nav visible-md visible-lg">
+							<ul class="sf-menu">
+								<li class="active"><a href="index.html">Home</a></li>
+					            <li><a href="#">Our Story</a>
+					            	<ul>
+					            		<li><a href="vision.html">Vision and Mission</a></li>
+					            		<li><a href="leadership.html">Team</a></li>
+					            		<li><a href="awards.html">Awards & Recognitions</a></li>
+										<li><a href="media.html">Media</a></li>
+					            	</ul>
+					            </li>
+					            <li><a href="#">What We Do</a>
+									<ul>
+										<li><a href="classroom.html">Classroom Programs</a></li>
+										<li><a href="talent.html">Talent Search</a></li>
+                    					
+                    					<li><a href="online.html">Online Learning</a></li>
+                    					<li><a href="experiential.html">Experiential Learning</a></li>                    
+									</ul>
+            					</li>
+             					<li><a href="#">Impact</a>
+									<ul>
+										<li><a href="collaborations.html">Collaborations</a></li>
+										<li><a href="empowerment.html">Empowerment</a></li>                    
+									</ul>
+            					</li>
+            					
+             					<li><a href="#">Get Involved</a>
+									<ul>
+										<li><a href="volunteer.html">Volunteer</a></li>
+										<li><a href="intern.html">Intern</a></li>
+                    					<li><a href="job.html">Full Time</a></li>                    
+									</ul>
+            					</li>
+                                <li><a href="blog.html">Blog</a></li>
+                                <li><a href="contact.html">Contact Us</a></li>
+									
+	      							<li class="social-icon"><a href="https://www.facebook.com/RiseWithRiSE/" target="_blank"><em class="fa fa-facebook"></em></a></li> 
+	      							<li class="social-icon"><a href="https://www.instagram.com/risewithrise/" target="_blank"><em class="fa fa-instagram"></em></a></li> 
+	     							<li class="social-icon"><a href="https://twitter.com/risewithrise" target="_blank"><em class="fa fa-twitter"></em></a></li> 
+	  							
+            					
+                                
+							</ul> <!-- /.sf-menu -->
+						</nav> <!-- /.main-nav -->
+
+						<!-- This one in here is responsive menu for tablet and mobiles -->
+					    <div class="responsive-navigation visible-sm visible-xs">
+					        <a href="#nogo" class="menu-toggle-btn">
+					            <i class="fa fa-bars"></i>
+					        </a>
+					    </div> <!-- /responsive_navigation -->
+
+					</div> <!-- /.main-navigation -->
+
+				</div> <!-- /.col-md-12 -->
+
+			</div> <!-- /.row -->
+
+		</div> <!-- /.container -->
+	</header> <!-- /.site-header -->
+
+
+<div class="col-md-12" style="	width:100%; background-image:url('../Site/images/patrick-tomasso-42162-unsplash1 copy.jpg');
+									background-size:     cover;
+									background-repeat:   no-repeat;
+									background-position: center center; 
+									color:white;
+									text-align:left;
+									padding-left: 5%;									
+									height:100vh;">
+	<div style="position: relative;
+    top: 70%;
+    transform: translateY(-50%);  "> <h1><strong><span style="font-family: 'Work Sans', sans-serif; color:white;"> Empowerment  </span></strong></h2><center>
+	<p style="padding-top:1%; padding-bottom:6%; text-align:left; color:#e28d55; font-family: 'Work Sans', sans-serif; font-size:1.3em;"> 
+Team RiSE aims at providing comprehensive preparatory classes <br/>to improve the capability and quality of education in Kashmir. </p>
+	
+	</div>
+	</center>
+	</div>
+
+		</div> <!-- /.row -->
+			<div id="myDIV"></div>
+		</div> <!-- /.container -->
+	
+	
+	
+	
+		
+<div class="clearfix"></div>
+		 
+		
+		
+		<div style="margin-top:5%; text-align:center; color:#e28d55; font-family: 'Work Sans', sans-serif; font-size:1.3em;"> <strong style="color:#e28d55; font-family: 'Work Sans', sans-serif; font-size:1.3em;""> RiSE  </strong>students have made a place at top institutions of India and USA  </div>
+		<div class="clearfix"></div>
+		
+		
+			<div class="related-projects">
+		
+
+		<div class="container">
+			<div class="row">
+				<div class="portfolio-holder">
+					<div class="portfolio-post col-sm-6 col-md-3">
+						<div align="center" class="thumb-post">
+							
+                        <img  style="border-radius: 50%; width: 70%" src="images/achievers/adeebatak.jpg" alt="Gloss Template">
+							
+						</div>
+						<br/>
+						<div align="center" style="font-size: 18px "> <b>Adeeba Tak</b></div>
+						
+						<div align="center" style="font-style: italic"> University of Pennsylvania</div>
+						<div align="center"> Batch of 20XX</div>
+					</div> <!-- /.col-md-4 -->
+
+					<div class="portfolio-post col-sm-6 col-md-3">
+						<div  align="center"  class="thumb-post">
+							
+                        <img  style="border-radius: 50%; width: 70%" src="images/achievers/aneeb.jpg" alt="Ion Template">
+						</div>
+						<br/>
+						<div align="center" style="font-size: 18px "> <b>Malik Aneeb</b></div>
+						
+						<div align="center" style="font-style: italic"> IIT Bombay</div>
+						<div align="center"> Batch of 20XX</div>
+					</div> <!-- /.col-md-4 -->
+					<div class="portfolio-post col-sm-6 col-md-3">
+						<div  align="center" class="thumb-post">
+							
+                        <img  style="border-radius: 50%; width: 70%" src="images/achievers/aquib.jpg" alt="Ion Template">
+						</div>
+						<br/>
+						<div align="center" style="font-size: 18px "> <b>Aqib</b></div>
+						
+						<div align="center" style="font-style: italic"> IIT Kharagpur</div>
+						<div align="center"> Batch of 20XX</div>
+					</div> <!-- /.col-md-4 -->
+
+					<div class="portfolio-post col-sm-6 col-md-3">
+						<div  align="center" class="thumb-post">
+							
+                        <img  style="border-radius: 50%; width: 70%" src="images/achievers/faizansofi.jpg" alt="Ion Template">
+						</div>
+						<br/>
+						<div align="center" style="font-size: 18px "> <b>Faizan Sofi</b></div>
+						
+						<div align="center" style="font-style: italic"> BITS Pilani</div>
+						<div align="center"> Batch of 20XX</div>
+					</div> 
+				</div> <!-- /.portfolio-holder -->
+			</div> <!-- /.row -->
+			
+			<br/>
+			
+			<div class="row">
+				<div class="portfolio-holder">
+					<div class="portfolio-post col-sm-6 col-md-3">
+						<div align="center" class="thumb-post">
+							
+                        <img  style="border-radius: 50%; width: 70%" src="images/achievers/kaleem.jpg" alt="Gloss Template">
+							
+						</div>
+						<br/>
+						<div align="center" style="font-size: 18px "> <b>Kaleem</b></div>
+						
+						<div align="center" style="font-style: italic"> IIT Dhanbad</div>
+						<div align="center"> Batch of 20XX</div>
+					</div> <!-- /.col-md-4 -->
+
+					<div class="portfolio-post col-sm-6 col-md-3">
+						<div  align="center"  class="thumb-post">
+							
+                        <img  style="border-radius: 50%; width: 70%" src="images/achievers/mehrajuddin.jpg" alt="Ion Template">
+						</div>
+						<br/>
+						<div align="center" style="font-size: 18px "> <b>Mahrajuddin</b></div>
+						
+						<div align="center" style="font-style: italic"> IIT Kanpur</div>
+						<div align="center"> Batch of 20XX</div>
+					</div> <!-- /.col-md-4 -->
+					<div class="portfolio-post col-sm-6 col-md-3">
+						<div  align="center" class="thumb-post">
+							
+                        <img  style="border-radius: 50%; width: 70%" src="images/achievers/moinmir.jpg" alt="Ion Template">
+						</div>
+						<br/>
+						<div align="center" style="font-size: 18px "> <b>Moin Mir</b></div>
+						
+						<div align="center" style="font-style: italic"> Princeton University</div>
+						<div align="center"> Batch of 20XX</div>
+					</div> <!-- /.col-md-4 -->
+
+					<div class="portfolio-post col-sm-6 col-md-3">
+						<div  align="center" class="thumb-post">
+							
+                        <img  style="border-radius: 50%; width: 70%" src="images/achievers/muhtashim.jpg" alt="Ion Template">
+						</div>
+						<br/>
+						<div align="center" style="font-size: 18px "> <b>Muhtashim</b></div>
+						
+						<div align="center" style="font-style: italic"> BITS Pilani</div>
+						<div align="center"> Batch of 20XX</div>
+					</div> 
+				</div> <!-- /.portfolio-holder -->
+			</div> <!-- /.row -->
+			<br/>
+			
+			<div class="row">
+				<div class="portfolio-holder">
+					<div class="portfolio-post col-sm-6 col-md-3">
+						<div align="center" class="thumb-post">
+							
+                        <img  style="border-radius: 50%; width: 70%" src="images/achievers/rajafida.jpg" alt="Gloss Template">
+							
+						</div>
+						<br/>
+						<div align="center" style="font-size: 18px "> <b>Raja Fida</b></div>
+						
+						<div align="center" style="font-style: italic"> IIT Bhubaneswar</div>
+						<div align="center"> Batch of 20XX</div>
+					</div> <!-- /.col-md-4 -->
+
+					<div class="portfolio-post col-sm-6 col-md-3">
+						<div  align="center"  class="thumb-post">
+							
+                        <img  style="border-radius: 50%; width: 70%" src="images/achievers/yawaraltaf.jpg" alt="Ion Template">
+						</div>
+						<br/>
+						<div align="center" style="font-size: 18px "> <b>Yawar Altaf</b></div>
+						
+						<div align="center" style="font-style: italic"> IIT Kanpur</div>
+						<div align="center"> Batch of 20XX</div>
+					</div> <!-- /.col-md-4 -->
+					<div class="portfolio-post col-sm-6 col-md-3">
+						<div  align="center" class="thumb-post">
+							
+                        <img  style="border-radius: 50%; width: 70%" src="images/achievers/yawaraltaf.jpg" alt="Ion Template">
+						</div>
+						<br/>
+						<div align="center" style="font-size: 18px "> <b>Asif</b></div>
+						
+						<div align="center" style="font-style: italic"> IIT Dhanbad</div>
+						<div align="center"> Batch of 20XX</div>
+					</div> <!-- /.col-md-4 -->
+
+					<div class="portfolio-post col-sm-6 col-md-3">
+						<div  align="center" class="thumb-post">
+							
+                        <img  style="border-radius: 50%; width: 70%" src="images/achievers/yawaraltaf.jpg" alt="Ion Template">
+						</div>
+						<br/>
+						<div align="center" style="font-size: 18px "> <b>Moazin</b></div>
+						
+						<div align="center" style="font-style: italic"> University of Washington</div>
+						<div align="center"> Batch of 20XX</div>
+					</div> 
+				</div> <!-- /.portfolio-holder -->
+			</div> <!-- /.row -->
+			
+		</div> <!-- /.container -->
+	</div> <!-- /.related-projects -->
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	
+	<!--  GRAPH -->
+	
+	<iframe src="../Site/graph/index.html" style="width:100%; height:80vh" frameBorder="0" ></iframe>
+	
+<div class="col-md-6" style="height:92.658vh;">
+<div id="doughnutChart" class="chart"></div>
+</div>
+	
+	<div class="col-md-6" style="height:92.658vh;; display: flex;
+  align-items: center; background-color:#ffffff; margin-top:0px;"><strong>
+    <div style="padding-left:10%; padding-right:10%; font-family: 'Varela Round', sans-serif; text-align:left; font-size:1.1em">
+	<p style="font-size:1.5em; color:#e28d55" >Success Stories</p>
+	
+	
+		By generating these success stories <span style="font-size:1.1em; color:#e28d55;">RiSE</span> has created a wave of hope in the valley.</strong><br> There is an exponential increment in the number of students applying to foreign universities and appearing in competitive examinations. 
+	
+     </div>
+ 
+ 
+ 
+ 
+</div>
+
+	
+	
+	
+	
+	
+<div class="col-md-6" style="height:92.658vh; background-image:url('../Site/images/zaaas.jpg')">
+</div>
+<div class="col-md-6" style="height:92.658vh; display: flex;
+  align-items: center; background-color:#fcf3ee"><strong>
+    <div style="padding-left:10%; padding-right:10%; font-family: 'Varela Round', sans-serif; text-align:left; font-size:1.1em">
+	<p style="font-size:1.5em; color:#e28d55" >RiSE Android App.</p>
+      <span style="">Created access to our content & counseling materials for underprivileged students in remote areas; <span style="font-size:1.1em; color:#e28d55;">~50,000</span> students.</strong><br> App used for online assessments acting as a workaround during frequent curfews, strikes & riots.
+    </div>
+ 
+</div>
+
+
+<div class="col-md-6" style="height:92.658vh; display: flex;
+  align-items: center; background-color:#fbf7f4"><strong>
+    <div style="padding-left:10%; padding-right:10%; font-family: 'Varela Round', sans-serif; text-align:right; font-size:1.1em">
+	<p style="font-size:1.5em; color:#e28d55" >RiSE vClass</p>
+      <span style="">More than <span style="font-size:1.1em; color:#e28d55;">200,000</span> YouTube views of RiSE video lectures. </strong> <br> Providing classroom experience in the native language of students who cannot afford joining any institute at the comfort and safety of their homes.  
+    </div>
+ 
+</div>
+<div class="col-md-6" style="height:92.658vh; background-image:url('../Site/images/oyunr.jpg')">
+</div>
+	
+<div class="col-md-6" style="height:92.658vh; background-image:url('../Site/images/aasd.jpg')">
+</div>
+<div class="col-md-6" style="height:92.658vh; display: flex;
+  align-items: center; background-color:#fcf3ee; margin-bottom:8%;"><strong>
+    <div style="padding-left:10%; padding-right:10%; font-family: 'Varela Round', sans-serif; text-align:left; font-size:1.1em">
+	<p style="font-size:1.5em; color:#e28d55" >Experiential learning</p>
+      <span style=""><span style="font-size:1.1em; color:#e28d55;">Kath Bath</span>, an idea of some students studying at RiSE which was molded into an organization under the guidance of faculties at RiSE is now officially a part of Ashoka India. </strong></br>Kath Baath is among the very few ideas across the country and the first from Kashmir that has made the cut into Ashoka's Youth Venture.  
+	  </div>
+ 
+</div>
+	
+	
+<footer class="site-footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<nav class="footer-nav clearfix">
+						<ul class="footer-menu">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="media.html">Media</a></li>
+							<li><a href="blog.html">Blog</a></li>
+							<li><a href="collaborations.html">Collaborations</a></li>
+							<li><a href="contact.html">Contact</a></li>
+						</ul> <!-- /.footer-menu -->
+					</nav> <!-- /.footer-nav -->
+				</div> <!-- /.col-md-12 -->
+			</div> <!-- /.row -->
+			<div class="row" >
+				<div class="col-md-12">
+					<p class="copyright-text">Copyright &copy; 2018 RiSE</p>
+				</div> <!-- /.col-md-12 -->
+			</div> <!-- /.row -->
+		</div> <!-- /.container -->
+	</footer> <!-- /.site-footer -->
+
+	<!-- Scripts -->
+	<script src="js/min/plugins.min.js"></script>
+	<script src="js/min/medigo-custom.min.js"></script>
+	<script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+
+
+</body>
+</html>
