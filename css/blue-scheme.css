@@ -1,18 +1,10 @@
-/*
+@import url('https://fonts.googleapis.com/css?family=Varela+Round');
 
-Medigo Template (Blue)
 
-http://www.templatemo.com/preview/templatemo_460_medigo
-
-*/
-
-/*------------------------------------------------------
-	BASIC STYLES 
---------------------------------------------------------*/
 body {
+  font-family: 'Varela Round', sans-serif;
   background: white;
   font-size: 16px;
-  font-family: "PT Serif", Georgia, serif;
   font-weight: normal;
   font-style: normal;
   line-height: 28px;
