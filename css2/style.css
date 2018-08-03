@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+
+body {
+  margin-top: 50px;
+  background: #e9e9e9;
+  font-family: "Roboto", sans-serif;
+}
+.team-card {
+  cursor: pointer;
+}
+a:hover {
+  color: #000;
+}
+.team-avatar {
+  position: relative;
+  height: 460px;
+  overflow: hidden;
+  border-radius: 5px;
+  text-align: center;
+  margin-bottom: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.03);
+  background-position: center center;
+  background-size: cover;
+}
+.team-avatar-round-container {
+  display: flex;
+  justify-content: center;
+  height: 0;
+  transition: all 0.3s cubic-bezier(0.68, -0.13, 0.265, 1.13);
+}
+.team-avatar-round {
+  height: 70px;
+  width: 70px;
+  overflow: hidden;
+  border-radius: 100px;
+  background-position: center center;
+  background-size: cover;
+  opacity: 0;
+  transform: scale(0, 0);
+  transition: all 0.3s cubic-bezier(0.68, -0.13, 0.265, 1.13);
+}
+.team-description {
+  position: absolute;
+  background: #fff;
+  padding: 5px 5px;
+  top: 380px;
+  height: 100%;
+  transition: all 0.3s cubic-bezier(0.68, 0, 0.265, 1);
+}
+.team-name {
+  display: inline-block;
+  color: #64dab0;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+.team-position {
+  display: inline-block;
+/*   background: #e9e9e9; */
+  padding: 1px 8px;
+  border-radius: 100px;
+  font-size: 0.9rem;
+  font-style: italic;
+  color: #333;
+  line-height: -100px;
+  margin-bottom: 15px;
+}
+.team-card:hover .team-description {
+  top: 0 !important;
+}
+.team-card:hover .team-avatar-round-container {
+  display: flex;
+  justify-content: center;
+  height: 80px;
+  margin-bottom: 15px;
+}
+.team-card:hover .team-avatar-round {
+  opacity: 1;
+  transform: scale(1, 1);
+}
+.team-button {
+  display: inline-block;
+  background: #64dab0;
+  color: #fff;
+  height: 40px;
+  width: 40px;
+  border-radius: 100px;
+  text-align: center;
+}
+.team-button .fa {
+  margin-top: 10px;
+}
