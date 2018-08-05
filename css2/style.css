@@ -2,7 +2,7 @@
 @import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
 
 body {
-  margin-top: 50px;
+  margin-top: 10px;
   background: #e9e9e9;
   font-family: "Roboto", sans-serif;
 }
@@ -14,11 +14,11 @@ a:hover {
 }
 .team-avatar {
   position: relative;
-  height: 460px;
+  height: 390px;
   overflow: hidden;
   border-radius: 5px;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.03);
   background-position: center center;
   background-size: cover;
@@ -43,8 +43,8 @@ a:hover {
 .team-description {
   position: absolute;
   background: #fff;
-  padding: 5px 5px;
-  top: 380px;
+  padding: 1px 1px;
+  top: 320px;
   height: 100%;
   transition: all 0.3s cubic-bezier(0.68, 0, 0.265, 1);
 }
@@ -52,12 +52,12 @@ a:hover {
   display: inline-block;
   color: #64dab0;
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
 }
 .team-position {
   display: inline-block;
 /*   background: #e9e9e9; */
-  padding: 1px 8px;
+  padding: 1px 2px;
   border-radius: 100px;
   font-size: 0.9rem;
   font-style: italic;
@@ -71,7 +71,7 @@ a:hover {
 .team-card:hover .team-avatar-round-container {
   display: flex;
   justify-content: center;
-  height: 80px;
+  height: 50px;
   margin-bottom: 15px;
 }
 .team-card:hover .team-avatar-round {
