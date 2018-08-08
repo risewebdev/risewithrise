@@ -1,0 +1,74 @@
+.notch-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.notch-top-v {
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+  min-height: 1rem;
+}
+.notch-top-v + .notch-top-v {
+  bottom: -10px;
+}
+.notch-top-v::before, .notch-top-v::after {
+  background-color: inherit;
+  bottom: 97%;
+  content: "";
+  position: absolute;
+  width: 50%;
+  min-height: 2.5rem;
+}
+.notch-top-v::before {
+  right: 50%;
+  transform: skewX(65deg);
+  transform-origin: 100% 100%;
+}
+.notch-top-v::after {
+  left: 50%;
+  transform: skewX(-65deg);
+  transform-origin: 0 100%;
+}
+
+.notch-wing-left {
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+  min-height: 1rem;
+}
+.notch-wing-left + .notch-wing-left {
+  bottom: -10px;
+}
+.notch-wing-left::after {
+  background-color: inherit;
+  bottom: 97%;
+  content: "";
+  position: absolute;
+  min-height: 2.5rem;
+  left: 0%;
+  width: 50%;
+  transform: skewX(65deg);
+  transform-origin: 100% 100%;
+}
+
+.notch-wing-right {
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+  min-height: 1rem;
+}
+.notch-wing-right + .notch-wing-right {
+  bottom: -10px;
+}
+.notch-wing-right::after {
+  background-color: inherit;
+  bottom: 97%;
+  content: "";
+  position: absolute;
+  min-height: 2.5rem;
+  right: 0%;
+  width: 50%;
+  transform: skewX(-65deg);
+  transform-origin: 100% 100%;
+}
