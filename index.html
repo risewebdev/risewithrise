@@ -73,7 +73,18 @@
 		cursor: pointer;
 		background-color:#ffecc6;
 	}
-	
+		.panel-heading:active{
+			background-color: #222;
+			color: white;
+		}
+		
+		.panel-heading:focus{
+			background-color: #FB0004;
+			color: white;
+			border: 5px;
+			border-color: black;
+		}
+		
 	@media (max-width: 600px) {
   #mob2 {
   width:100%;
@@ -555,7 +566,7 @@ figure.snip1232 .author span {
                     <li><a href="digital.html">Digital Literacy</a></li>
                     <li><a href="online.html">Online Learning</a></li>
                     <li><a href="experiental.html">Experiential Learning</a></li> 
-					<li><a href="fellowshipCover.html">Fellowship Program</a></li>
+					<li><a href="fellowship.html">Fellowship Program</a></li>
 				</ul>
             </li>
              <li><a href="#">Impact</a>
@@ -615,7 +626,7 @@ figure.snip1232 .author span {
                     					
                     					<li><a href="online.html">Online Learning</a></li>
                     					<li><a href="experiential.html">Experiential Learning</a></li>   
-										<li><a href="fellowshipCover.html">Fellowship Program</a></li>
+										<li><a href="fellowship.html">Fellowship Program</a></li>
 									</ul>
             					</li>
              					<li><a href="#">Impact</a>
@@ -920,26 +931,14 @@ figure.snip1232 .author span {
      </div>
 </div>
 -->
-<p style="color: white">mbnsdfsdhjk</p>
-<div class="col-md-12" style="	width:100%; background-image:url('images/caleb-woods-275754-unsplash1.jpg');
-									background-size:     cover;
-									background-repeat:   no-repeat;
-									background-position: center center; 
-									color:white;
-									text-align:center;	
-									height:100vh;
-									font-family: 'Varela Round', sans-serif;">
-	<div style="position: relative;
-    top: 50%;
-    transform: translateY(-50%);"> <h1 ><strong><span style="font-size:1.2em; color:#e28d55"> Vision </strong> </span> </h1> <center>
-	
-	<p style="width:80%; padding-top:6%; padding-bottom:6%; font-size:1.1em;">At RiSE, we believe that a successful classroom is one in which the students' zeal to learn is matched by the teacher's passion to teach. We lay emphasis on selecting the right set of students and providing them with coaching and personalized mentoring to help them meet their goals.
+
+
+	<div align="center" style="padding-bottom: 3%;padding-top: 3%">
+		<strong><p style="color:#e28d55 ;font-size: 25px">OUR VISION</p></strong>
+		<p style="width:80%; padding-top:2%; padding-bottom:2%; font-size:1.1em;">Our vision at <strong><span style="color:#e28d55 ">RiSE</span></strong>  is to empower students to acquire, demonstrate, articulate and value<br> knowledge and skills that will support them, as life-long learners.
 </p>
+		<a href="vision.html" ><button class="snip1582" > Vision & Mission </button></a></div>
 	
-	<a href="fellowshipCover.html"><button class="snip1582" > Vision & Mission </button></a>
-	</div>
-	</center>
-	</div>
 
 <div class="col-md-12" style="	width:100%; background-image:url('images/patrick-tomasso-42162-unsplash1 copy.jpg');
 									background-size:     cover;
@@ -966,15 +965,40 @@ The RiSE Fellowship Program is an opportunity for every blazing mind to Educate,
 	
 
 		
-	 <div style="padding-left:10%; padding-right:10%; font-family: 'Varela Round', sans-serif; text-align:center; font-size:1.1em;background-color: #222;padding-bottom:  4%" >
+	 <div style="padding-left:10%; padding-right:10%; font-family: 'Varela Round', sans-serif; text-align:center; font-size:1.1em;background-color: white;padding-bottom:  4%" >
 	<p style="font-size:1.5em; color:#e28d55;" >WHAT WE DO</p>
 	
-	<p style="color: white">	By providing the following programs <span style="font-size:1.1em; color:#e28d55;">RiSE</span> has created a whole new environment in the valley.</strong><br> This has given the valley(especially the students) a number of new interactive ways to learn and benefit. 
+	<p style="color: black">	By providing the following programs <span style="font-size:1.1em; color:#e28d55;">RiSE</span> has created a whole new environment in the valley.</strong><br> This has given the valley(especially the students) a number of new interactive ways to learn and benefit. 
 	
 	
      </div>
 <br>
 	
+
+
+
+
+
+<script>	$(document).ready(function(){
+					$(".panel-heading").on({
+
+						click: function(){
+							$(this).css("background-color", "#222");
+              $(this).css("font-size", "24px");
+              $(this).css("color", "white");
+              $(this).css("font-family", "arial");
+						}  
+					});
+				});</script>
+
+
+
+
+
+
+
+
+
 		
 	<div class="container" style="background-color:white" style="height:100vh; width:100%; ">
 		
@@ -988,7 +1012,7 @@ The RiSE Fellowship Program is an opportunity for every blazing mind to Educate,
                 <div class="panel panel-default">
                     <!--wrap panel heading in span to trigger image change as well as collapse -->
                     <span class="side-tab" data-target="#tab3" data-toggle="tab" role="tab" aria-expanded="false">
-                        <div class="panel-heading" role="tab" id="headingThree"  class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        <div class="panel-heading" role="tab" id="headingThree"  class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree" style="color: white;background-color: #222">
                             <h4 class="panel-title">Classroom Program </h4>
                         </div>
                     </span>
@@ -1019,21 +1043,7 @@ The RiSE Fellowship Program is an opportunity for every blazing mind to Educate,
                       </div>
                 
 				
-                <!-- panel 1 -->
-                <div class="panel panel-default">
-                    <!--wrap panel heading in span to trigger image change as well as collapse -->
-                    <span class="side-tab" data-target="#tab1" data-toggle="tab" role="tab" aria-expanded="false">
-                        <div class="panel-heading" role="tab" id="headingOne"data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            <h4 class="panel-title">RiSE vClass</h4>
-                        </div>
-                    </span>
-                    
-                    <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-                        <div class="panel-body" style="background-color:#f9d181;">
-                        <!-- Tab content goes here -->
-                        RiSE is Kashmir’s first free online education platform with the aim of providing precise, compact and useful information for anyone, anywhere. With the RiSE channel, you can practice variety of numerical problems with comprehensive solutions and technique within the comfort of your home. <a href="vClass.html">More...</a> </div>
-                    </div>
-                </div> 
+              
                 <!-- / panel 1 -->
                 
                 <!-- panel 2 -->
@@ -1041,14 +1051,14 @@ The RiSE Fellowship Program is an opportunity for every blazing mind to Educate,
                     <!--wrap panel heading in span to trigger image change as well as collapse -->
                     <span class="side-tab" data-target="#tab2" data-toggle="tab" role="tab" aria-expanded="false">
                         <div class="panel-heading" role="tab" id="headingTwo" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            <h4 class="panel-title collapsed">RiSE Android App.</h4>
+                            <h4 class="panel-title collapsed">Online Learning</h4>
                         </div>
                     </span>
 
                     <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
                         <div class="panel-body" style="background-color:#f9d181;">
                         <!-- Tab content goes here -->
-                        Mobile APP: Curated access to our content & counseling materials for underprivileged students in remote areas; ~50,000 students. App used for online assessments & video lectures; acting as a workaround during frequent curfews, strikes & riots. <a href="online.html">More...</a> 
+                       CONTENT HERE!!!!!!!!!!<a href="online.html">More...</a> 
                         </div>
                     </div>
                 </div>
@@ -1071,21 +1081,7 @@ The RiSE Fellowship Program is an opportunity for every blazing mind to Educate,
                         </div>
                       </div>
 					  
-				<div class="panel panel-default">
-                    <!--wrap panel heading in span to trigger image change as well as collapse -->
-                    <span class="side-tab" data-target="#tab6" data-toggle="tab" role="tab" aria-expanded="false">
-                        <div class="panel-heading" role="tab" id="headingSix"  class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                            <h4 class="panel-title">Experiential Learning </h4>
-                        </div>
-                    </span>
-
-                        <div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
-                          <div class="panel-body" style="background-color:#f9d181;">
-                          <!-- tab content goes here -->
-                         Kath Baath, an initiative put forth by the future of tomorrow, is a first of its kind initiative in the valley, which is totally youth-oriented and dedicated for the betterment of future society. It is the only platform in Kashmir without any gender segregation where boys and girls come together in the same space to share their opinions. <a href="experiential.html">More...</a> </div>
-                        </div>
-                      </div>
-					  
+			
             </div> <!-- / panel-group -->
              
         </div> <!-- /col-md-4 -->

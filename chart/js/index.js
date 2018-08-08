@@ -1,4 +1,4 @@
-zingchart.THEME="classic";
+
 var initState = null; 
 
 var bgColors = ["#ffa000","#ffa000","#ffa000","#ffa000","#ffa000","#ffa000"]; 
@@ -11,7 +11,7 @@ var myConfig = {
     "title": {
         "color": "#606060",
         "background-color": "white",
-        "text": "RiSE Over the Years. 2013 to 2018"
+
     },
     "subtitle": {
         "color": "#606060",
@@ -23,10 +23,14 @@ var myConfig = {
             "line-color": "none"
         },
         "guide": {
-            "line-style": "solid"
+		
+            "line-style": "none",
+			
+			"visible":false
+			
         },
         "item": {
-            "color": "#606060"
+            "color": "#FFFFFF"
         }
     },
     "scale-x": {
@@ -38,17 +42,19 @@ var myConfig = {
             "2017",
             "2018"
         ],
-        "line-color": "#C0D0E0",
-        "line-width": 1,
+        "line-color": "#FFFFFF",
+        "line-width": 0,
         "tick": {
-            "line-width": 1,
-            "line-color": "#C0D0E0"
+            "line-width": 0,
+            "line-color": "#FFFFFF"
         },
         "guide": {
             "visible": false
         },
         "item": {
-            "color": "#606060"
+            "color": "#222",
+	
+			
         }
     },
     "crosshair-x": {
@@ -116,7 +122,7 @@ var myConfig = {
         "value-box": {
            
       
-            "color": "#606060"
+            "color": "#222"
         },
         "tooltip": {
             "visible": false
