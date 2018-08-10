@@ -58,7 +58,7 @@
   bottom: 46px;
   left: 20px;
   right: 20px;
-  border-bottom: 2px solid #ffffff;
+  border-bottom: 0px solid #ffffff;
   padding-top: 20px;
   z-index: 1;
 }
@@ -128,8 +128,4 @@
   opacity: 1;
   -webkit-transition-delay: 0.2s;
   transition-delay: 0.2s;
-}
-/* Demo purposes only */
-body {
-  background-color: #212121;
 }
