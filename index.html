@@ -69,7 +69,18 @@
 
 	
 	
-	
+	.img-responsive.mobile {
+  display: none;
+}
+
+@media only screen and (max-device-width: 480px) {
+  .img-responsive {
+    display: none;
+  }
+  .img-responsive.mobile {
+    display: block;
+  }
+}
 	
 	
 	
@@ -1019,13 +1030,16 @@ figure.snip1232 .author span {
   <div class="slide_viewer" style="padding-top:5%; height:60vh" >
     <div class="slide_group" style="width:100%">
       <div class="slide">
-		<img src="images/car1.jpg" width="80%">
+		<img src="images/car1.jpg" class="img-responsive careerpage" width="80%">
+		<img src="images/mcar1.jpg" class="img-responsive careerpage mobile">
       </div>
       <div class="slide">
-		<img src="images/car2.jpg" width="80%">
+		<img src="images/car1.jpg" class="img-responsive careerpage" width="80%">
+		<img src="images/mcar2.jpg" class="img-responsive careerpage mobile">
       </div>
       <div class="slide">
-		<img src="images/car3.jpg" width="80%">
+		<img src="images/car1.jpg" class="img-responsive careerpage" width="80%">
+		<img src="images/mcar3" class="img-responsive careerpage mobile">
       </div>
     </div>
   </div>
