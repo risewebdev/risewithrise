@@ -80,7 +80,7 @@ a:hover {
 }
 .team-button {
   display: inline-block;
-  background: #64dab0;
+  background: #49BDFF;
   color: #fff;
   height: 40px;
   width: 40px;
@@ -89,4 +89,5 @@ a:hover {
 }
 .team-button .fa {
   margin-top: 10px;
+	
 }
